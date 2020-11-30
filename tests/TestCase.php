@@ -2,9 +2,9 @@
 
 namespace GetThingsDone\Account\Tests;
 
-use Orchestra\Testbench\TestCase as Orchestra;
 use GetThingsDone\Account\AccountServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

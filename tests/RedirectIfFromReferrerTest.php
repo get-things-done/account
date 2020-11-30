@@ -17,10 +17,11 @@ class RedirectIfFromReferrerTest extends TestCase
         $middleware = new RedirectIfFromReferrer;
         $request = Request::create('test');
 
-        $response = $middleware->handle($request,function(){});
+        $response = $middleware->handle($request, function () {
+        });
         
-        $this->assertEquals(302,$response->getStatusCode());
-        $this->assertStringContainsString('http://example.com',$response->getContent());
+        $this->assertEquals(302, $response->getStatusCode());
+        $this->assertStringContainsString('http://example.com', $response->getContent());
         $this->assertNull(session()->get('referrer'));
     }
 
@@ -33,7 +34,8 @@ class RedirectIfFromReferrerTest extends TestCase
         $middleware = new RedirectIfFromReferrer;
         $request = Request::create('test');
 
-        $response = $middleware->handle($request,function(){});
+        $response = $middleware->handle($request, function () {
+        });
         
         $this->assertNull($response);
     }
@@ -46,7 +48,8 @@ class RedirectIfFromReferrerTest extends TestCase
         $middleware = new RedirectIfFromReferrer;
         $request = Request::create('test');
 
-        $response = $middleware->handle($request,function(){});
+        $response = $middleware->handle($request, function () {
+        });
         
         $this->assertNull($response);
     }

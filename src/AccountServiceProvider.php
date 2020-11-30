@@ -2,8 +2,8 @@
 
 namespace GetThingsDone\Account;
 
-use Illuminate\Support\ServiceProvider;
 use GetThingsDone\Account\Commands\AccountCommand;
+use Illuminate\Support\ServiceProvider;
 
 class AccountServiceProvider extends ServiceProvider
 {
@@ -36,7 +36,7 @@ class AccountServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/account.php', 'account');
-        config(['database.connections.account'=>config('account.database_connection')]);
+        config(['database.connections.account' => config('account.database_connection')]);
     }
 
     public static function migrationFileExists(string $migrationFileName): bool

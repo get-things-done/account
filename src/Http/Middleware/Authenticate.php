@@ -15,6 +15,7 @@ class Authenticate extends Middleware
     {
         if (! $request->expectsJson()) {
             session([ 'referrer' => session()->get('url.indended') ?? config('app.url') ]);
+
             return config('account.redirect_url');
         }
 
