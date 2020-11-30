@@ -1,6 +1,6 @@
 <?php
 
-namespace GetThingsDone\Skeleton\Tests;
+namespace GetThingsDone\Account\Tests;
 
 class ExampleTest extends TestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace GetThingsDone\Skeleton\Database\Factories;
+namespace GetThingsDone\Account\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

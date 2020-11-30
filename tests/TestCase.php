@@ -1,9 +1,9 @@
 <?php
 
-namespace GetThingsDone\Skeleton\Tests;
+namespace GetThingsDone\Account\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-use GetThingsDone\Skeleton\SkeletonServiceProvider;
+use GetThingsDone\Account\AccountServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TestCase extends Orchestra
@@ -13,14 +13,14 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'GetThingsDone\\Skeleton\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'GetThingsDone\\Account\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            SkeletonServiceProvider::class,
+            AccountServiceProvider::class,
         ];
     }
 
@@ -34,7 +34,7 @@ class TestCase extends Orchestra
         ]);
 
         /*
-        include_once __DIR__.'/../database/migrations/create_skeleton_table.php.stub';
+        include_once __DIR__.'/../database/migrations/create_account_table.php.stub';
         (new \CreatePackageTable())->up();
         */
     }

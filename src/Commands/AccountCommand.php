@@ -1,12 +1,12 @@
 <?php
 
-namespace GetThingsDone\Skeleton\Commands;
+namespace GetThingsDone\Account\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class AccountCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'account';
 
     public $description = 'My command';
 

@@ -1,21 +1,21 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "get-things-done/account",
+    "description": "",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "get-things-done",
+        "account"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/get-things-done/account",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Cao Minh Duc",
+            "email": "caominhduc31081@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.4",
+        "php": "^7.4|^8.0",
         "illuminate/contracts": "^8.0"
     },
     "require-dev": {
@@ -26,13 +26,13 @@
     },
     "autoload": {
         "psr-4": {
-            "GetThingsDone\\Skeleton\\": "src",
-            "GetThingsDone\\Skeleton\\Database\\Factories\\": "database/factories"
+            "GetThingsDone\\Account\\": "src",
+            "GetThingsDone\\Account\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "GetThingsDone\\Skeleton\\Tests\\": "tests"
+            "GetThingsDone\\Account\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -47,10 +47,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "GetThingsDone\\Skeleton\\SkeletonServiceProvider"
+                "GetThingsDone\\Account\\AccountServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "GetThingsDone\\Skeleton\\SkeletonFacade"
+                "Account": "GetThingsDone\\Account\\AccountFacade"
             }
         }
     },
