@@ -36,6 +36,7 @@ class AccountServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/account.php', 'account');
+        config(['database.connections.account'=>config('account.database_connection')]);
     }
 
     public static function migrationFileExists(string $migrationFileName): bool
